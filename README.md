@@ -77,6 +77,9 @@ In graph mode, text is represented in the form of a graph, where nodes represent
 ### Options
 Here you can change between table and graph mode as well as selecting additional attributes you want to display in the comparison view.
 
+## Acknowledgements
+I want to thank Roman Bleier working at the Centre for Information Modelling (ZIM) for his input and suggestions while developing InCritApp.
+
 ## Libraries  Used
 InCritApp uses the following existing libraries:
 
