@@ -1,0 +1,29 @@
+/*heatmap*/
+
+.heatdiv {
+    width: auto; 
+    overflow-x:scroll;  
+    padding-left:115px; 
+}
+
+.heatheadcol {
+    color: grey;
+    position: absolute; 
+    width: 115px; 
+    left: 0;
+    background-color: white;
+    text-align: right;
+}
+
+.heatmaptdfiller {
+    min-width: 40px;
+    min-height: 23px;
+}
+
+.numchaptercol {
+    text-align: center;
+}
+
+.selected {
+    outline: 3px solid black;
+}

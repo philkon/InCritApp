@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InCritApp</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.color-2.1.2.min.js"></script>
+<script type="text/javascript" src="scripts/popper.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/d3.v4.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="scripts/dagre-d3.js"></script>
+<script type="text/javascript" src="scripts/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="scripts/incritapp.js"></script>
+</head>
+<body>
+<div class="container-fluid mt-2">
+    <div class="card-deck">
+        <div class="card box-shadow mx-2">
+            <div class="card-header p-0 text-center">
+                <h5 class="my-0 font-weight-normal">File Input</h5>
+            </div>
+            <div class="card-body p-2 ">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-primary" type="button" id="browse-button">
+                            Browse 
+                        </button>
+                        <input type="file" style="display: none;" accept=".json" id="file-reader">
+                    </div>
+                    <input type="text" class="form-control" readonly id="file-name">
+                </div>
+                <small class="form-text text-muted">
+                      Only JSON files are allowed and must follow defined file structure.
+                </small>
+            </div>
+        </div>
+        <div class="card box-shadow mx-2">
+              <div class="card-header p-0 text-center">
+                    <h5 class="my-0 font-weight-normal">File Information</h5>
+             </div>
+            <div class="card-body p-2">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-0">
+                        Number of Texts:
+                        <span class="badge badge-primary badge-pill" id="num-texts">-</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-0">
+                        Number of Chapters:
+                        <span class="badge badge-primary badge-pill" id="num-chapters">-</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-0">
+                        Number of Words:
+                        <span class="badge badge-primary badge-pill" id="num-words">-</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-0">
+                        Number of Witnesses:
+                        <span class="badge badge-primary badge-pill" id="num-witnesses">-</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card box-shadow mx-2">
+            <div class="card-header p-0 text-center">
+                <h5 class="my-0 font-weight-normal">Options</h5>
+            </div>
+            <div class="card-body p-2 text-center">
+                <span class="text-muted">View: </span>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons" id="view-options">
+                    <label class="btn btn-primary active btn-sm">
+                        <input type="radio" name="view-options" value="option-table" autocomplete="off" checked> Table
+                    </label>
+                    <label class="btn btn-primary btn-sm">
+                        <input type="radio" name="view-options" value="option-graph" autocomplete="off"> Graph
+                     </label>
+                </div>
+                <div id="detail-options">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-2">
+    <div class="card-deck d-none" id="heatmap-card">
+        <div class="card box-shadow mx-2">
+            <div class="card-header p-0 text-center">
+                <h5 class="my-0 font-weight-normal">Overview</h5>
+              </div>
+              <div class="card-body p-1" id="heatmap">
+              </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid my-2">
+    <div class="card-deck d-none" id="details-card">
+        <div class="card box-shadow mx-2">
+            <div class="card-header p-0 text-center">
+                <h5 class="my-0 font-weight-normal" id="chapter-title"></h5>
+              </div>
+              <div class="card-body text-center p-0" id="chapter-details">
+              </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
