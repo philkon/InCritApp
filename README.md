@@ -1,4 +1,4 @@
-# InCritApp -  Interactive Critical Apparatus.
+# InCritApp -  Interactive Critical Apparatus
 
 ![InCritApp](/docs/images/tool.PNG)
 
@@ -8,19 +8,19 @@ Note that this tool is a work in progress. If you come across a bug, please feel
 
 ## Usage
 
-InCritApp is very simple to use. Since it is a web application build on JavaScript, all you have to do is either to checkout the repository and open the `html` file with a web browser of your choice. Despite being a web application, it works without an active internet connection.
+InCritApp is very simple to use. Since it is a web application build on JavaScript, all you have to do is either to checkout the repository and open the `InCritApp.html` file in a web browser of your choice. Despite being a web application, it works without an active internet connection.
 
 ### File Format and Import
 Your input data must be a JSON file containing text data in CollateX export format and additional metadata, such as witness names or offsets to text starts. In particular, it must contain the following keys:
 
 | Key | Description |
 | --- | --- |
-| `witnesses` | List containing names of text witnesses in the same order as in the CollateX data |
-| `text_starts` | List containing integers marking offsets of text starts |
-| `text_titles` | List containing names of texts. Must be of same length and in the same order as `text_starts` |
+| `witnesses` | List containing names of text witnesses in the same order as in the CollateX data. |
+| `text_starts` | List containing integers marking offsets of text starts. |
+| `text_titles` | List containing names of texts. Must be of same length and in the same order as `text_starts`. |
 | `chapter_starts` | List containing integers marking offsets of chapter starts. The offset of the first chapter of a text is equal to the respective text offset. |
-| `attribute_names` | Dictionary containing a mapping for more descriptive attribute names |
-| `table` | JSON data in CollateX export format |
+| `attribute_names` | Dictionary containing a mapping for more descriptive attribute names. |
+| `table` | JSON data in CollateX export format. |
 
 #### CollateX export format
 The structure is a two-dimensional array, where rows represent word tokens in a sequential order, and columns contain variant readings of witnesses. The order of witnesses must be the same as in the list contained in `witnesses`. Each element is a dictionary containing at least an `id` and a `t` key, but additional attributes can be added. Note that each key must be mapped in the `attribute_names` mapping. 
