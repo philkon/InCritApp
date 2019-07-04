@@ -277,7 +277,6 @@ function getDetails(text_title, chapter_idx, chapter_real, attribute) {
 }
 
 function buildTable(chapter_idx) {
-    var linknums = {"msD": 0, "msP": 1, "msV": 2, "msR": 3, "msC": 4, "msG": 5, "msF": 6}
     var empty_color = "#f0f0f0"
     var highlight_color = "#ffcc5c"
 
